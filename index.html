@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeadPhones from the future</title>
+    <link rel="stylesheet" href="css/simple-lightbox.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body id="home">
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <h1 class="logo">Phonic</h1>
+        <ul class="nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#about">Contact Us</a></li>
+          <li><a href="#about">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--Section A-->
+    <section class="section-a">
+      <div class="container">
+        <div class="">
+          <h1>The Headphones Of The Future</h1>
+          <h3 class="headPhones">
+            Beatenburg Studio <span>769</span> Wireless
+          </h3>
+          <p><i class="fa fa-ban" aria-hidden="true"></i> Noise Canceling</p>
+          <p>
+            <i class="fa fa-battery-full" aria-hidden="true"></i>Up to 22 hours
+            battery life
+          </p>
+          <p><i class="fa fa-wifi" aria-hidden="true"></i> Wireless</p>
+          <a href="#" class="btn"> Read More</a>
+        </div>
+        <img src="https://i.ibb.co/37Y74kv/showcase.jpg" alt="" />
+      </div>
+    </section>
+
+    <!--Overlay Text-->
+
+    <section class="section-b">
+      <div class="overlay">
+        <div class="section-b-inner">
+          <h2>Immerse yourself in your music</h2>
+          <p>
+            Immerse yourself in your music With an advanced acoustic platform
+            and noise cancelling, Beatenburg Studio <span>769</span> Wireless
+            ensures you’ll always have the right sound for the right situation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Gallery-->
+
+    <section class="section-c">
+      <div class="gallery">
+        <a href="img/image1.jpg" class="img1 big"
+          ><img src="img/image1.jpg" alt=""
+        /></a>
+        <a href="img/image 6.jpg" class="img2 big"
+          ><img src="img/image 6.jpg" alt=""
+        /></a>
+        <a href="img/image4.jpg" class="img3 big"
+          ><img src="img/image4.jpg" alt=""
+        /></a>
+      </div>
+    </section>
+
+    <footer class="section-footer">
+      <div class="container">
+        <div class="socialMedia">
+          <h3>Social Media</h3>
+          <a href="http://twitter.com">
+            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+          <a href="http://facebook.com">
+            <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+          </a>
+          <a href="http://instagram.com">
+            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="com">
+          <h3>Company Info</h3>
+          <ul>
+            <li><a href="#"> All Products</a></li>
+            <li><a href="#"> About Us</a></li>
+            <li><a href="#"> Privacy Policy</a></li>
+            <li><a href="#"> Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="blogs">
+          <h3>Blog Posts</h3>
+          <ul>
+            <li><a href="#">The Magic Of Sound</a></li>
+            <li><a href="#">What to consider before buying headphones</a></li>
+            <li><a href="#">Different phones for different fokes</a></li>
+          </ul>
+        </div>
+        <div class="">
+          <h3>Subscribe</h3>
+          <p>Subscribe to be the first to know about our upcoming Headphones</p>
+          <form name="email-form" method="POST" data-netlify="true">
+            <div class="email-form">
+              <span class="form-control-wrap">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  size="40"
+                  class="form-control"
+                  placeholder="Email"
+                />
+              </span>
+              <button type="submit" class="form-control submit">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </form>
+          <p class="disclaimer">
+            *By clicking the '>' button, you agree that Phonic may send you
+            emails at the address provided above from time to time on notifying
+            you about the lastes headphones*
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/simple-lightbox.min.js"></script>
+    <script>
+      const lightbox = new SimpleLightbox(".gallery a");
+
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      // Get the header
+      var header = document.getElementById("navbar");
+
+      // Get the offset position of the navbar
+      var sticky = header.offsetTop;
+
+      // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>
