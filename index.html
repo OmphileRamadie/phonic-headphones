@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HeadPhones from the future</title>
+    <title>Phonic</title>
     <link rel="stylesheet" href="css/simple-lightbox.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link
@@ -17,12 +17,12 @@
   </head>
   <body id="home">
     <nav class="navbar" id="navbar">
-      <div class="container">
+      <div class="container" id="top">
         <h1 class="logo">Phonic</h1>
         <ul class="nav">
-          <li><a href="#home">Home</a></li>
+          <li><a href="#home" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#about">Contact Us</a></li>
+          <li><a href="#about">Contacts</a></li>
           <li><a href="#about">Blog</a></li>
         </ul>
       </div>
@@ -32,9 +32,7 @@
       <div class="container">
         <div class="">
           <h1>The Headphones Of The Future</h1>
-          <h3 class="headPhones">
-            Beatenburg Studio <span>769</span> Wireless
-          </h3>
+          <h3 class="headPhones">Beatenburg Studio 769 Wireless</h3>
           <p><i class="fa fa-ban" aria-hidden="true"></i> Noise Canceling</p>
           <p>
             <i class="fa fa-battery-full" aria-hidden="true"></i>Up to 22 hours
@@ -55,8 +53,8 @@
           <h2>Immerse yourself in your music</h2>
           <p>
             Immerse yourself in your music With an advanced acoustic platform
-            and noise cancelling, Beatenburg Studio <span>769</span> Wireless
-            ensures you’ll always have the right sound for the right situation.
+            and noise cancelling, Beatenburg Studio 769 Wireless ensures you’ll
+            always have the right sound for the right situation.
           </p>
         </div>
       </div>
@@ -109,7 +107,7 @@
             <li><a href="#">Different phones for different fokes</a></li>
           </ul>
         </div>
-        <div class="">
+        <div class="subscribeContainer">
           <h3>Subscribe</h3>
           <p>Subscribe to be the first to know about our upcoming Headphones</p>
           <form name="email-form" method="POST" data-netlify="true">
@@ -161,5 +159,6 @@
         }
       }
     </script>
+    <script src="js/app.js"></script>
   </body>
 </html>

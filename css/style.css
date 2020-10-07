@@ -38,7 +38,6 @@ img {
 }
 
 .container {
-  max-width: 1100px;
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
@@ -46,20 +45,20 @@ img {
 
 .navbar {
   font-size: 1.2rem;
-  padding-top: 0.3rem;
+  padding-top: 1rem;
   padding-bottom: 0.3rem;
   margin-bottom: 4rem;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .navbar .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar .logo {
   font-size: 2rem;
+  margin-left: 4rem;
 }
 
 .navbar ul {
@@ -67,6 +66,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 4rem;
 }
 
 .navbar a {
@@ -76,7 +76,8 @@ img {
   border-radius: 3px;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.active {
   color: #555;
   border-bottom: 5px solid #555;
 }
@@ -84,7 +85,11 @@ img {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: whitesmoke;
+  background: whitesmoke;
+}
+
+.burger {
+  display: none;
 }
 
 /*Section A*/
@@ -99,6 +104,7 @@ img {
   grid-gap: 3rem;
   align-items: center;
   justify-content: center;
+  max-width: 1100px;
 }
 
 .section-a h1 {
@@ -190,6 +196,7 @@ span {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
+  max-width: 1100px;
 }
 
 .section-footer h2 {
@@ -246,6 +253,8 @@ span {
   width: 100%;
   height: 45px;
   border-radius: 20px;
+  position: relative;
+  top: 7px;
 }
 
 .email-form .submit {
@@ -294,10 +303,103 @@ span {
 
 /* Media Queries */
 
-@media (max-width: 700px) {
-  .section-a .container {
-    grid-template-columns: 1fr;
+@media (max-width: 1024px) {
+  .navbar .logo {
+    margin-left: 10px;
+  }
+  .navbar ul {
+    margin-right: 10px;
+  }
+  .navbar .container {
+    margin: auto;
+  }
+
+  .navbar li {
+    margin: 0 5px;
+  }
+
+  .sticky {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  .section-b {
+    margin-top: 0.1rem;
+  }
+  .section-b-inner h2 {
+    font-size: 3rem;
+  }
+  .section-b-inner p {
+    font-size: 1.3rem;
+    width: 80%;
+  }
+
+  .section-c .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    height: 70%;
+  }
+  .img2 {
+    display: none;
+  }
+  .blogs {
+    display: none;
+  }
+
+  .section-footer .container {
+    grid-template-columns: 1fr 1fr;
     text-align: center;
+  }
+
+  .subscribeContainer {
+    width: 70%;
+    margin: 3rem auto 0 auto;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    margin-bottom: -30px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 40px;
+  }
+
+  .nav li {
+    margin-top: 10px;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .burger {
+    display: block;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 5px;
+    background-color: var(--primary-color);
+    margin: 4px;
+  }
+
+  .section-a .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-a .container img {
+    width: 40%;
+    margin: auto;
   }
   .section-a .container div:first-child {
     order: 2;
@@ -307,6 +409,9 @@ span {
     order: -1;
   }
 
+  .section-a .container h1 {
+    font-size: 1.8rem;
+  }
   .section-a img {
     width: 80%;
     margin: auto;
@@ -346,23 +451,20 @@ span {
     display: none;
   }
 
-  .navbar ul {
+  .section-c .gallery {
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: -10px;
-  }
-  .navbar li {
-    margin-top: 20px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
-  .section-c .gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
   .section-c .gallery img,
   .section-c .gallery a {
-    width: 100%;
+    width: 85%;
+    margin: auto;
+    height: 80%;
   }
   .img2,
   .img3 {
@@ -398,7 +500,10 @@ span {
     margin-bottom: 10px;
     padding: 20px;
   }
-  .section-b {
-    margin-top: 350px;
+
+  .sticky {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
   }
 }
